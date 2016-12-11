@@ -1,6 +1,8 @@
 #!/bin/sh
 
-rsync -rltzPhO "/cygdrive/d/$USER Privat" ${USER,,}@vae.danishdecoration.dk:/tank/dd/share/
+source settings.txt
+
+rsync -rltzPhO "$DATAFOLDER/$USER Privat" ${USER,,}@vae.danishdecoration.dk:/tank/dd/share/
 
 echo "Afsluttet. Venter i 20 sekunder"
 sleep 20
