@@ -1,0 +1,6 @@
+#!/bin/sh
+
+rsync -rltDzPh --no-perms vae.danishdecoration.dk:/tank/dd/share/Billeder "/cygdrive/d/"
+
+echo "Afsluttet. Venter i 20 sekunder"
+sleep 20

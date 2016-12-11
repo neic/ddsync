@@ -1,0 +1,6 @@
+#!/bin/sh
+
+rsync -rltzPhO "/cygdrive/d/$USER Privat" vae.danishdecoration.dk:/tank/dd/share/
+
+echo "Afsluttet. Venter i 20 sekunder"
+sleep 20
