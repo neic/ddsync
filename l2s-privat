@@ -1,8 +1,16 @@
 #!/bin/sh
 
+LOGFILE="l2s-billeder.log"
+
 source ~/ddsync/settings.txt
 
-rsync -rltzPhO "$DATAFOLDER/${USER^^} Privat" ${USER,,}@vae.danishdecoration.dk:/tank/dd/share/
+echo -e "\n\n" >> $LOGFILE
+date +%Y-%m-%dT%H:%M:%S%z >> $LOGFILE
+echo -e "\n\n" >> $LOGFILE
+
+rsync -rltzPhO "$DATAFOLDER/${USER^^} Privat" ${USER,,}@vae.danishdecoration.dk:/tank/dd/share/ | tee -a $LOGFILE
+
+echo -e "\n\n" >> $LOGFILE
 
 echo "Afsluttet. Venter i 20 sekunder"
 sleep 20
