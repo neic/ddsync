@@ -1,1 +1,1 @@
-DATAFOLDER="/cygdrive/d"
+DATAFOLDER="/cygdrive/c/Data"
