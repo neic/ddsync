@@ -1,0 +1,16 @@
+#!/bin/sh
+
+LOGFILE="s2l-privat.log"
+
+source ~/ddsync/settings.txt
+
+echo -e "\n\n" >> $LOGFILE
+date +%Y-%m-%dT%H:%M:%S%z >> $LOGFILE
+echo -e "\n\n" >> $LOGFILE
+
+rsync -rltDzPh --no-perms "${USER,,}@vae.danishdecoration.dk:/tank/dd/share/${USER^^} Privat" "$DATAFOLDER/" | tee -a $LOGFILE
+
+echo -e "\n\n" >> $LOGFILE
+
+echo "Afsluttet. Venter i 20 sekunder"
+sleep 20
