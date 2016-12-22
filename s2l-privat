@@ -8,7 +8,7 @@ echo -e "\n\n" >> $LOGFILE
 date +%Y-%m-%dT%H:%M:%S%z >> $LOGFILE
 echo -e "\n\n" >> $LOGFILE
 
-rsync -rltDLzPh --no-perms "${USER,,}@vae.danishdecoration.dk:/tank/dd/share/${USER^^}\ Privat" "$DATAFOLDER/" | tee -a $LOGFILE
+rsync -rltDLzPh --no-perms "${DDUSER,,}@vae.danishdecoration.dk:/tank/dd/share/${DDUSER^^}\ Privat" "$DATAFOLDER/" | tee -a $LOGFILE
 
 echo -e "\n\n" >> $LOGFILE
 

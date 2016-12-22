@@ -1,1 +1,3 @@
 DATAFOLDER="/cygdrive/c/Data"
+
+DDUSER=$USER
