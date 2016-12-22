@@ -1,6 +1,6 @@
 #!/bin/sh
 
-LOGFILE="l2s-billeder.log"
+LOGFILE="l2s-privat.log"
 
 source ~/ddsync/settings.txt
 
